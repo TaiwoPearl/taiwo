@@ -1,0 +1,386 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content:left;
+    align-items: left;
+    padding: 0 20px;
+    background: rgb(199, 199, 212);
+    position: relative;
+  
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-top: 12px;
+    margin-right: 20px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    position: relative;
+    margin-right: 40%; 
+  }
+
+  .nav-menu ul li:hover ul li{
+    display: block;
+    list-style: none;
+    gap:10px;
+    position: relative;
+  
+  }
+  
+  .nav-item {
+    margin-right: 1.5rem;
+    position: relative;
+    
+    
+  }
+  
+  .nav-link {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 150px;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 20px;
+  }
+  
+  .dropdown-menu li img {
+    height: 16px;
+    margin-right: 8px;
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .auth a,
+  .auth button {
+    margin-left: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  .auth .register {
+    background: white;
+    color: black;
+    border-color: #777;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    
+  }
+
+  /* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 999;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sidebar-logo {
+    height: 30px;
+  }
+  
+  .close-icon {
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar-auth {
+    margin-top: 30px;
+  }
+  
+  .sidebar-auth a{
+    Display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    margin: 1rem 0;
+    color: #777;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .sidebar-auth button {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px  16px;
+    border: 1px solid #000;
+    background-color: white;
+    color: #777;
+    
+  }
+  
+  
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-menu.active{
+    display: flex;
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .hero-text p {
+    margin: 1rem 0;
+    color: #777;
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    background: black;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  
+  .hero-image img {
+    width: 300px;
+    margin-left: 6rem;
+    
+  }
+  
+  /* Partner Logos */
+  .partner-logos {
+    display: flex;
+    justify-content:left;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .partner-logos img {
+    height: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100px;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+    }
+  }
+  /* Dropdown Animation */
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-10px);
+  }
+  
+  .dropdown-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+
+  
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  height: 30px;
+  margin-right: 40px;
+}
+
+/* Navigation Links */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  z-index: 10;
+}
+
+.dropdown-menu li {
+  padding: 8px 12px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Dropdown Active */
+.nav-item.active .dropdown-menu {
+  display: block;
+}
+
+/* Auth Links */
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth a {
+  text-decoration: none;
+  color: black;
+}
+
+.auth button {
+  border: 1px solid black;
+  padding: 5px 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .auth {
+    display: none; /* Hide login/register for mobile for now */
+  }
+}
